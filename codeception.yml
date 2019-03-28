@@ -8,3 +8,11 @@ actor_suffix: Tester
 extensions:
     enabled:
         - Codeception\Extension\RunFailed
+settings:
+    colors: true
+    memory_limit: 1024M
+    shuffle: true
+gherkin:
+    contexts:
+        default:
+            - GherkinSteps
