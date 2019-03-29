@@ -13,3 +13,4 @@ modules:
 
 groups:
     wip: tests/_groups/wip
+    wip2: tests/_groups/wip2

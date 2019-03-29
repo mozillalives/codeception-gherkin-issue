@@ -10,6 +10,21 @@ Feature: Refund item
     Then Jeff should be refunded $100
 
   Scenario: Jeff returns a faulty microwave2
-    Given Jeff has bought a microwave for "$100"
+    Given Jeff has bought a microwave for "$200"
     When he returns the microwave
-    Then Jeff should be refunded $100
+    Then Jeff should be refunded $200
+
+  Scenario: Jeff returns a faulty item
+    Given Jeff has bought a microwave for "$75"
+    When he returns the microwave
+    Then Jeff should be refunded $75
+  
+  Scenario Outline: Jeff returns a faulty item
+    Given Jeff has bought a microwave for <amount>
+    When he returns the microwave
+    Then Jeff should be refunded <amount>
+  
+  Examples:
+  | amount |
+  | $25 |
+  | $50 |

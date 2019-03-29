@@ -20,9 +20,9 @@ class GherkinSteps
     }
 
    /**
-    * @Then Jeff should be refunded $:num1:num2:num2
+    * @Then Jeff should be refunded $:num1
     */
-    public function jeffShouldBeRefunded($num1, $num2, $num3)
+    public function jeffShouldBeRefunded($num1)
     {
         // pass
     }
